@@ -2,11 +2,44 @@
 
 namespace OOPDWeek2
 {
+    public class ParentClass
+    {
+        public ParentClass()
+        {
+            Console.WriteLine("Creating an instance of Parent");
+        }
+        public void Print()
+        {
+            Console.WriteLine("I am a Parent");
+        }
+
+        public void SayHello()
+        {
+            Console.WriteLine("Hello");
+        }
+    }
+
+    public class ChildClass : ParentClass
+    {
+        public ChildClass()
+        {
+            Console.WriteLine("Creating an instance of Child");
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("I am a Child");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ParentClass parent = new ParentClass();
+            ChildClass child = new ChildClass();
+
+            child.SayHello();
         }
     }
 }
